@@ -21,13 +21,13 @@ file(GLOB src_files *.cpp)
 #aux_source_directory()
 
 add_library(
-        native-lib
+        ylxplayer
         SHARED
         ${src_files})
 
 #解决问题的能力
 target_link_libraries(
-        native-lib
+        ylxplayer
         # TODO
         #        avcodec avfilter avformat avutil swresample swscale
         #        avformat avcodec avfilter  avutil swresample swscale
@@ -35,5 +35,6 @@ target_link_libraries(
         avcodec avfilter avformat avutil swresample swscale
         -Wl,--end-group
         log
+        android
         z
 )
